@@ -1,0 +1,34 @@
+{
+    "name": "layout",
+    "version": "1.0.0",
+    "description": "A layout tutorial",
+    "main": "index.js",
+    "scripts": {
+        "start": "start-storybook -p 6006",
+        "build": "USER_DIR=** build-storybook"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ErBlack/layout.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ErBlack/layout/issues"
+    },
+    "homepage": "https://github.com/ErBlack/layout#readme",
+    "devDependencies": {
+        "@babel/core": "^7.19.6",
+        "@storybook/addon-essentials": "^6.5.13",
+        "@storybook/builder-webpack4": "^6.5.13",
+        "@storybook/manager-webpack4": "^6.5.13",
+        "@storybook/react": "^6.5.13",
+        "babel-loader": "^8.2.5",
+        "dotenv": "^16.0.3",
+        "prettier": "^2.7.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "dependencies": {}
+}
