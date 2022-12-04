@@ -5,7 +5,7 @@ import { Button } from './button';
 export default {
     title: 'ertema/Button',
     args: {
-        children: 'Кнопка',
+        children: 'Button',
     },
     component: Button,
 };
