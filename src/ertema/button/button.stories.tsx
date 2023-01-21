@@ -1,13 +1,18 @@
+import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
-import { Button } from './button';
+import { Button, ButtonProps } from './button';
 
 export default {
     title: 'ertema/Button',
-    args: {
-        children: 'Button',
-    },
     component: Button,
-};
+    args: {
+        children: 'button',
+        size: 'm',
+        view: 'default',
+        disabled: false,
+    },
+    argTypes: {},
+} as Meta<ButtonProps>;
 
-export const Common = args => <Button {...args} />;
+export const Common: Story<ButtonProps> = args => <Button {...args} />;

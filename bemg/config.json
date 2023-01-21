@@ -1,0 +1,142 @@
+{
+  "aliases": {
+    "cnt": "container.tsx",
+    "const": "constants.ts",
+    "theme": "figaro.tokens.yaml",
+    "stories": "stories.tsx"
+  },
+  "naming": {
+    "elem": "__",
+    "mod": {
+      "name": "_",
+      "val": "_"
+    }
+  },
+  "snippets": {
+    "typescriptreact": {
+      "Шаблон <Layout/> с type=\"default\"": {
+        "prefix": [
+          "bld",
+          "bemg-layout-default"
+        ],
+        "body": [
+          "import { compose } from '@bem-react/core';",
+          "import React, { FC } from 'react';",
+          "",
+          "import { withTypeDefault } from 'client/components/layout/_type/layout_type_default';",
+          "import { Layout as LayoutBase } from 'client/components/layout/layout';",
+          "",
+          "import { cn${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/} } from '../${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/$2/}.constants';",
+          "",
+          "const Layout = compose(withTypeDefault)(LayoutBase);",
+          "",
+          "export const ${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}Layout: FC = ({ children }) => (",
+          "\t<Layout className={cn${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}('layout')} type=\"default\">",
+          "\t\t{children}",
+          "\t</Layout>",
+          ");"
+        ],
+        "description": "Шаблон <Layout/> с type=\"default\""
+      },
+      "Шаблон <Checkbox/> с size=\"l\"": {
+        "prefix": [
+          "bld",
+          "bemg-checkbox-size-l"
+        ],
+        "body": [
+          "import { compose, ExtractProps } from '@bem-react/core';",
+          "import { Checkbox as CheckboxBase, withViewDefault } from '@yandex/ui/Checkbox/desktop';",
+          "import React, { FC } from 'react';",
+          "",
+          "import { withSizeL } from 'client/components/checkbox/_size/checkbox_size_l';",
+          "",
+          "const Checkbox = compose(withViewDefault, withSizeL)(CheckboxBase);",
+          "",
+          "import { cn${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/} } from '../${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/$2/}.constants';",
+          "",
+          "export type CourseTreeCheckProps = Omit<ExtractProps<typeof Checkbox>, 'size' | 'view'>;",
+          "",
+          "export const ${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}Checkbox: FC = ({ children }) => (",
+          "\t<Checkbox className={cn${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}('layout')} view=\"default\" size=\"l\">",
+          "\t\t{children}",
+          "\t</Checkbox>",
+          ");"
+        ],
+        "description": "Шаблон <Layout/> с type=\"default\""
+      },
+      "Лего <Button/> с size=\"s\" и view: \"default\" | \"action\"": {
+        "prefix": [
+          "blb",
+          "bemg-lego-button"
+        ],
+        "body": [
+          "import { compose, composeU, ExtractProps } from '@bem-react/core';",
+          "import { withSizeS, withViewAction, withViewDefault } from '@yandex/ui/Button';",
+          "import React, { FC } from 'react';",
+          "",
+          "import { Button as ButtonBase } from 'client/components/button/button';",
+          "",
+          "import { cn${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/} } from '../${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/$2/}.constants';",
+          "",
+          "const Button = compose(withSizeS, composeU(withViewAction, withViewDefault))(ButtonBase);",
+          "",
+          "export type ${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}ButtonProps = Omit<ExtractProps<typeof Button>, 'size'>;",
+          "",
+          "export const ${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}Button: FC<${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}ButtonProps> = props => (",
+          "\t<Button className={cn${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}('button')} size=\"s\" {...props} />",
+          ");"
+        ],
+        "description": "Лего <Button/> с size=\"s\" и view: \"default\" | \"action\""
+      },
+      "Лего <Icon/> с glyph на выбор": {
+        "prefix": [
+          "bli",
+          "bemg-lego-icon"
+        ],
+        "body": [
+          "import { compose, ExtractProps, IClassNameProps } from '@bem-react/core';",
+          "import { Icon as IconBase } from '@yandex/ui/Icon';",
+          "import React, { FC } from 'react';",
+          "",
+          "import { withGlyph${1/(.*)/${1:/capitalize}/} } from 'client/components/icon/_glyph/icon_glyph_${1/(.*)/${1:/downcase}/}';",
+          "",
+          "import { cn${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/} } from '../${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/$2/}.constants';",
+          "",
+          "const Icon = compose(withGlyph${1/(.*)/${1:/capitalize}/})(IconBase);",
+          "",
+          "export type ${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}IconProps = Pick<ExtractProps<typeof Icon>, 'glyph'> & IClassNameProps;",
+          "",
+          "export const ${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}Icon: FC<${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}IconProps> = ({ glyph, className }) => (",
+          "\t<Icon className={cn${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}('icon', [className])} glyph={glyph} />",
+          ");"
+        ],
+        "description": "Лего <Icon/> с glyph на выбор"
+      },
+      "Лего <Icon/> с несколькими glyph на выбор": {
+        "prefix": [
+          "blim",
+          "bemg-lego-icon-multiple"
+        ],
+        "body": [
+          "import { composeU, ExtractProps, IClassNameProps } from '@bem-react/core';",
+          "import { Icon as IconBase } from '@yandex/ui/Icon';",
+          "import React, { FC } from 'react';",
+          "",
+          "import { withGlyph${1/(.*)/${1:/capitalize}/} } from 'client/components/icon/_glyph/icon_glyph_${1/(.*)/${1:/downcase}/}';",
+          "import { withGlyph${2/(.*)/${1:/capitalize}/} } from 'client/components/icon/_glyph/icon_glyph_${2/(.*)/${1:/downcase}/}';",
+          "",
+          "import { cn${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/} } from '../${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/$2/}.constants';",
+          "",
+          "const Icon = composeU(withGlyph${1/(.*)/${1:/capitalize}/}, withGlyph${2/(.*)/${1:/capitalize}/})(IconBase);",
+          "",
+          "export type ${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}IconProps = Pick<ExtractProps<typeof Icon>, 'glyph'> & IClassNameProps;",
+          "",
+          "export const ${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}Icon: FC<${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}IconProps> = ({ glyph, className }) => (",
+          "\t<Icon className={cn${TM_FILEPATH/(.*\\/([a-z\\-]+).*)/${2:/pascalcase}/}('icon', [className])} glyph={glyph} />",
+          ");"
+        ],
+        "description": "Лего <Icon/> с glyph на выбор"
+      }
+    }
+  }
+}
