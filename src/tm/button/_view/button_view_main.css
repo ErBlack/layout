@@ -1,7 +1,0 @@
-.button_view_main:not(:disabled) {
-    color: white;
-    background-color: black;
-}
-.button_view_main:not(:disabled):hover {
-    background-color: var(--button-accent-color);
-}
