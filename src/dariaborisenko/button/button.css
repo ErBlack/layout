@@ -1,0 +1,16 @@
+.button {
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+
+}
+
+.button:disabled {
+    border: none;
+    color: gray;
+    background-color: lightgray;
+}
+
+.button:not(:disabled):active {
+    transform: scale(.96);
+}

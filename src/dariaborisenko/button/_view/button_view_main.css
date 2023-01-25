@@ -1,0 +1,9 @@
+.button_view_main {
+    border: none;
+    color: white;
+    background-color: black;
+}
+
+.button_view_main:not(:disabled):hover {
+    background-color: blue;
+}
