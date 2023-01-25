@@ -1,4 +1,4 @@
-.button {
+.button-chiglintsev {
     --button-accent-color: Crimson;
     border: none;
     border-radius: 8px;
@@ -7,11 +7,11 @@
     transition: background-color 0.15s ease-in, color 0.15s ease-in, transform 0.15s ease-out;
 }
 
-.button:disabled {
+.button-chiglintsev:disabled {
     color: gray;
     background-color: lightgray;
 }
 
-.button:not(:disabled):active {
+.button-chiglintsev:not(:disabled):active {
     transform: scale(0.96);
 }

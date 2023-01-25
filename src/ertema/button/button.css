@@ -1,4 +1,4 @@
-.button {
+.button-ertema {
     --button-accent-color: orangered;
     border: none;
     border-radius: 8px;
@@ -7,11 +7,11 @@
     transition: background-color 0.15s ease-in, color 0.15s ease-in, transform 0.15s ease-out;
 }
 
-.button:disabled {
+.button-ertema:disabled {
     color: gray;
     background-color: lightgray;
 }
 
-.button:not(:disabled):active {
+.button-ertema:not(:disabled):active {
     transform: scale(0.96);
 }

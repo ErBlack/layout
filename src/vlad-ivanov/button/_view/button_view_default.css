@@ -1,7 +1,7 @@
-.button_view_default:not(:disabled) {
+.button-vlad_view_default:not(:disabled) {
     background-color: gainsboro;
 }
 
-.button_view_default:not(:disabled):hover {
+.button-vlad_view_default:not(:disabled):hover {
     background-color: lightgray;
 }

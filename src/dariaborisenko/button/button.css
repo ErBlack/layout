@@ -1,16 +1,15 @@
-.button {
+.button-dariaborisenko {
     border-radius: 8px;
     display: flex;
     align-items: center;
-
 }
 
-.button:disabled {
+.button-dariaborisenko:disabled {
     border: none;
     color: gray;
     background-color: lightgray;
 }
 
-.button:not(:disabled):active {
-    transform: scale(.96);
+.button-dariaborisenko:not(:disabled):active {
+    transform: scale(0.96);
 }

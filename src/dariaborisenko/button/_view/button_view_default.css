@@ -1,9 +1,8 @@
-.button_view_default {
+.button-dariaborisenko_view_default {
     border: none;
     background-color: gainsboro;
 }
 
-.button_view_default:not(:disabled):hover {
+.button-dariaborisenko_view_default:not(:disabled):hover {
     background-color: lightgray;
 }
-

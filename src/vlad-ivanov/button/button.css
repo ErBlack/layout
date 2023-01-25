@@ -1,4 +1,4 @@
-.button {
+.button-vlad {
     --button-accent-color: darkcyan;
     border: none;
     border-radius: 8px;
@@ -7,19 +7,19 @@
     transition: background-color 0.15s ease-in, color 0.15s ease-in, transform 0.15s ease-out;
 }
 
-.button:not(:disabled) {
+.button-vlad:not(:disabled) {
     cursor: pointer;
 }
 
-.button:not(:disabled):active {
+.button-vlad:not(:disabled):active {
     transform: scale(0.96);
 }
 
-.button:disabled {
+.button-vlad:disabled {
     color: gray;
     background-color: lightgray;
 }
 
-.button:focus-visible {
+.button-vlad:focus-visible {
     outline: solid 2px var(--button-accent-color);
 }

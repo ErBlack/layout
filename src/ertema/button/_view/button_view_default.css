@@ -1,8 +1,8 @@
-.button_view_default:not(:disabled) {
+.button-ertema_view_default:not(:disabled) {
     background-color: gainsboro;
     color: black;
 }
 
-.button_view_default:not(:disabled):hover {
+.button-ertema_view_default:not(:disabled):hover {
     background-color: lightgray;
 }

@@ -1,4 +1,4 @@
-.button {
+.button-pa {
     --button-accent-color: darkViolet;
     border: none;
     border-radius: 8px;
@@ -7,11 +7,11 @@
     transition: background-color 0.15s ease-in, color 0.15s ease-in, transform 0.15s ease-out;
 }
 
-.button:disabled {
+.button-pa:disabled {
     background-color: lightgrey;
     color: grey;
 }
 
-.button:not(:disabled):active {
+.button-pa:not(:disabled):active {
     transform: scale(0.96);
 }

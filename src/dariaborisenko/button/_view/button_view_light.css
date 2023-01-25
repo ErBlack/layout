@@ -1,10 +1,10 @@
-.button_view_light {
+.button-dariaborisenko_view_light {
     border-width: 2px;
     border-color: black;
     background-color: white;
 }
 
-.button_view_light:not(:disabled):hover {
+.button-dariaborisenko_view_light:not(:disabled):hover {
     border-color: blue;
     color: blue;
 }

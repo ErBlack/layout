@@ -1,3 +1,3 @@
 import { cn } from 'lib/cn';
 
-export const cnButton = cn('button');
+export const cnButton = cn('button-ertema');
