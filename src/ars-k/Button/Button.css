@@ -1,0 +1,14 @@
+.Button {
+    --button-accent-color: brown;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+.Button:disablled {
+    color: gray;
+    background-color: lightgray;
+}
+.Button:not(:disablled):active {
+    transform: scale(0.96);
+}
