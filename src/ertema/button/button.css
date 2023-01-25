@@ -1,0 +1,17 @@
+.button {
+    --button-accent-color: orangered;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.15s ease-in, color 0.15s ease-in, transform 0.15s ease-out;
+}
+
+.button:disabled {
+    color: gray;
+    background-color: lightgray;
+}
+
+.button:not(:disabled):active {
+    transform: scale(0.96);
+}
