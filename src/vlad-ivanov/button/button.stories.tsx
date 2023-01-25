@@ -9,9 +9,9 @@ export default {
     args: {
         children: 'Button',
         size: 'm',
-        view: 'default'
+        view: 'default',
     },
     argTypes: {},
 } as Meta<ButtonProps>;
 
-export const Common: Story<ButtonProps> = (args) => <Button {...args} />;
+export const Common: Story<ButtonProps> = args => <Button {...args} />;

@@ -7,10 +7,12 @@ export default {
     title: 'chiglintsev/Button',
     component: Button,
     args: {
-        children: "Button",
-        onClick: () => {console.log('yep')}
+        children: 'Button',
+        onClick: () => {
+            console.log('yep');
+        },
     },
     argTypes: {},
 } as Meta<ButtonProps>;
 
-export const Common: Story<ButtonProps> = (args) => <Button {...args} />;
+export const Common: Story<ButtonProps> = args => <Button {...args} />;
