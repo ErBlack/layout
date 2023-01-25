@@ -1,0 +1,25 @@
+.button {
+    --button-accent-color: darkcyan;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.15s ease-in, color 0.15s ease-in, transform 0.15s ease-out;
+}
+
+.button:not(:disabled) {
+    cursor: pointer;
+}
+
+.button:not(:disabled):active {
+    transform: scale(0.96);
+}
+
+.button:disabled {
+    color: gray;
+    background-color: lightgray;
+}
+
+.button:focus-visible {
+    outline: solid 2px var(--button-accent-color);
+}
