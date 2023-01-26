@@ -1,0 +1,7 @@
+.Button_view_default:not(:disabled) {
+    background-color: gainsboro;
+}
+
+.Button_view_default:not(:disabled):hover {
+    background-color: lightgray;
+}
